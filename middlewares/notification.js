@@ -4,7 +4,7 @@ var request 				= require('request'),
 
 
 module.exports.creatNotification = function (req, res, next) {
-	sendPushNotification(req.body.message, req.body.tag, req.body.reward_id, function(data) {
+	sendPushNotification(req.body.message, req.body.tag, req.body.url, function(data) {
 		console.log('push numbers', data.recipients);
 		res.status(200).json({message: "notification sent", recipients: data.recipients});
 	});
