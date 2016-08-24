@@ -5,6 +5,8 @@ var express	 	= require('express'),
     request 	= require('request');
 
 router.route('/')
-    .post(nMiddleware.creatNotification, sMiddleware.createSms);
+    .post(nMiddleware.creatNotification);
+router.route('/sms')
+	.post(sMiddleware.createSms);
 
 module.exports = router;
