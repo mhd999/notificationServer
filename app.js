@@ -19,6 +19,7 @@ app.use(cors(corsOptions));
 
 app.use('/api/notification', notificationRoutes);
 
+app.use('/api/sms', notificationRoutes);
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
