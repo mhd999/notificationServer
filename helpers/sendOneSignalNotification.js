@@ -11,13 +11,13 @@ var options = {
     }
 };
 
-module.exports = function(notificationText, tag, rewardId, callback){
+module.exports = function(notificationText, tag, url, callback){
         var rec;
         options.body = {
             app_id: config.oneSignalId,
             contents: {'en': notificationText},
             tags: [tag],
-            url: 'http://localhost/gui/index.html#/view-reward/' + rewardId
+            url: url
         };
 
         request.post(options, function(error, response, body){

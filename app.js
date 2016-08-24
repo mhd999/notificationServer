@@ -17,12 +17,8 @@ var corsOptions = {
 };
 app.use(cors(corsOptions));
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
-
 app.use('/api/notification', notificationRoutes);
-app.post('/api/aws', awsServices.sign);
+
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');

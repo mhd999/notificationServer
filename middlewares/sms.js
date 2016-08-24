@@ -7,7 +7,7 @@ module.exports.createSms = function (req, res) {
 
 	client.messages.create({
 	    body: req.body.message,
-	    to: '+4741188492',
+	    to: 'TO',
 	    from: config.twilioNumber
 	}, function(err, message) {
 		if (err) console.log(err);
